@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/movie_recommend"
+        android:title="recommendation"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/movie_latest"
+        android:title="latest"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/search_page"
+        android:title="Search"
+        app:showAsAction="never"/>
+
+</menu>

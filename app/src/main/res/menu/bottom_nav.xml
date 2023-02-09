@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_page"
+        android:title="Movie"
+        android:icon="@drawable/ic_baseline_movie_24"/>
+    <item
+        android:id="@+id/save_page"
+        android:title="My Movie"
+        android:icon="@drawable/ic_baseline_bookmarks_24"/>
+    <item
+        android:id="@+id/search_page"
+        android:title="Search"
+        android:icon="@drawable/ic_baseline_search_24"/>
+
+</menu>
