@@ -15,7 +15,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        tools:context=".ui.movie.MovieFragment">
+        tools:context=".ui.searchmovie.SearchFragment">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"

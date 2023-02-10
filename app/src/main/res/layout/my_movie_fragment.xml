@@ -2,8 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <data>
         <variable
@@ -15,7 +14,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        tools:context=".ui.movie.MovieFragment">
+        tools:context=".ui.mymovie.MyMovieFragment">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -39,3 +38,4 @@
     </LinearLayout>
 
 </layout>
+
