@@ -6,27 +6,25 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.example.movieapp.R
+import com.example.movieapp.databinding.MyMovieFragmentBinding
 
 class MyMovieFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = MyMovieFragment()
-    }
-
-    private lateinit var viewModel: MyMovieViewModel
+    private val viewModel: MyMovieViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.my_movie_fragment, container, false)
+        val binding: MyMovieFragmentBinding = MyMovieFragmentBinding.inflate(layoutInflater)
+
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MyMovieViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
+//    override fun onActivityCreated(savedInstanceState: Bundle?) {
+//        super.onActivityCreated(savedInstanceState)
+//    }
 
 }

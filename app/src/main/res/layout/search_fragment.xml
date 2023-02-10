@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     >
 
-    <data>
+    <data class="SearchFragmentBinding">
         <variable
-            name="movie"
+            name="search"
             type="String" />
     </data>
 

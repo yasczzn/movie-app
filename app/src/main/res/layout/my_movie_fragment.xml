@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <data>
+    <data class="MyMovieFragmentBinding">
         <variable
-            name="movie"
+            name="my_movie"
             type="String" />
     </data>
 
