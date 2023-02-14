@@ -1,54 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data class="ActivityMainBinding">
+
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/black">
 
-        <FrameLayout
-            android:id="@+id/container_frame"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            tools:context="com.example.movieapp.MainActivity">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/no_internet"
-                android:layout_width="wrap_content"
+            <FrameLayout
+                android:id="@+id/container_frame"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:context="com.example.movieapp.MainActivity">
+
+                <TextView
+                    android:id="@+id/no_internet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="not connected to internet!"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:src="@drawable/ic_baseline_wifi_off_24"
+                    android:textColor="@color/grey"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="not connected to internet!"
-                android:textStyle="bold"
-                android:textSize="@dimen/_15sdp"
-                android:textColor="@color/grey"
-                android:layout_gravity="center"
-                android:visibility="gone"/>
+                android:background="@color/black"
+                app:itemIconTint="@drawable/state_list"
+                app:itemTextColor="@drawable/state_list"
+                app:menu="@menu/bottom_nav"/>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_50sdp"
-                android:src="@drawable/ic_baseline_wifi_off_24"
-                android:textColor="@color/grey"
-                android:visibility="gone"/>
-
-        </FrameLayout>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            app:itemIconTint="@drawable/state_list"
-            app:itemTextColor="@drawable/state_list"
-            app:menu="@menu/bottom_nav"/>
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</layout>
+
