@@ -9,10 +9,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.movieapp.R
 import com.example.movieapp.databinding.MyMovieFragmentBinding
+import com.example.movieapp.ui.moviedetails.MovieDetailsFragment
+import com.example.movieapp.ui.moviedetails.MovieDetailsViewModel
 
 class MyMovieFragment : Fragment() {
 
-    private val viewModel: MyMovieViewModel by viewModels()
+    private lateinit var viewModel: MyMovieViewModel
+
+    companion object {
+        fun  newInstance() = MyMovieFragment()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,8 +29,9 @@ class MyMovieFragment : Fragment() {
         return binding.root
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(MyMovieViewModel::class.java)
+    }
 
 }

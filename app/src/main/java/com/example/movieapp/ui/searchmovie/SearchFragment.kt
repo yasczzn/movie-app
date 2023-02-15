@@ -9,10 +9,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.movieapp.R
 import com.example.movieapp.databinding.SearchFragmentBinding
+import com.example.movieapp.ui.movie.mymovie.MyMovieFragment
+import com.example.movieapp.ui.movie.mymovie.MyMovieViewModel
 
 class SearchFragment : Fragment() {
 
-    private val viewModel: SearchViewModel by viewModels()
+    private lateinit var viewModel: SearchViewModel
+
+    companion object {
+        fun  newInstance() = SearchFragment()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,9 +29,9 @@ class SearchFragment : Fragment() {
         return binding.root
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-//    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+    }
 
 }

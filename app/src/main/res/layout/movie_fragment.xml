@@ -5,49 +5,78 @@
 
     <data class="MovieFragmentBinding">
         <variable
-            name="movie"
-            type="String" />
+            name="MovieResponse"
+            type="com.example.movieapp.response.MovieResponse"/>
     </data>
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:id="@+id/layout_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         tools:context=".ui.movie.MovieFragment">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"/>
+            android:text="@string/app_name"
+            android:src=""/>
 
-        <TextView
-            android:id="@+id/movie_filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_15sdp"
-            android:textStyle="bold"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/white"
-            android:text="Movie Recommendations"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rc_movie"
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scv_movies"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/item_movie"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:scrollbars="none"
+            tools:ignore="UselessParent">
 
-        <TextView
-            android:id="@+id/movie_n"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_15sdp"
-            android:textStyle="bold"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/white"
-            android:text="Just For You"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/movie_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    android:text="Movie Recommendations"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_movie"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+                <TextView
+                    android:id="@+id/movie_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    android:text="Just For You"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rc_movie_recommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_movie"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 

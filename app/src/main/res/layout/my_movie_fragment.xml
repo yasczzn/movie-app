@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data class="MyMovieFragmentBinding">
         <variable
@@ -11,8 +9,8 @@
     </data>
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".ui.mymovie.MyMovieFragment">
 
@@ -28,7 +26,7 @@
             android:textStyle="bold"
             android:textSize="@dimen/_15sdp"
             android:textColor="@color/white"
-            android:text="Movie Recommendations"/>
+            android:text="My Movie Collections"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

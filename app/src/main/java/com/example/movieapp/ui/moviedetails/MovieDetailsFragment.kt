@@ -7,12 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.movieapp.MovieFragment
+import com.example.movieapp.MovieViewModel
 import com.example.movieapp.R
 import com.example.movieapp.databinding.MovieDetailsFragmentBinding
 
 class MovieDetailsFragment : Fragment() {
 
-    private val viewModel: MovieDetailsViewModel by viewModels()
+    private lateinit var viewModel: MovieDetailsViewModel
+
+    companion object {
+        fun  newInstance() = MovieDetailsFragment()
+    }
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -23,9 +29,9 @@ class MovieDetailsFragment : Fragment() {
         return binding.root
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(MovieDetailsViewModel::class.java)
-//    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(MovieDetailsViewModel::class.java)
+    }
 
 }

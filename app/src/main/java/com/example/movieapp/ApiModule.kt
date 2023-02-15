@@ -14,7 +14,7 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun products(retrofit: Retrofit): MovieService =
+    fun movies(retrofit: Retrofit): MovieService =
         retrofit.create(MovieService::class.java)
 
 }

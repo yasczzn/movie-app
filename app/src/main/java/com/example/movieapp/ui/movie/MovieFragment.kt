@@ -11,7 +11,11 @@ import com.example.movieapp.databinding.MovieFragmentBinding
 
 class MovieFragment : Fragment() {
 
-    private val viewModel: MovieViewModel by viewModels()
+    private lateinit var viewModel: MovieViewModel
+
+    companion object {
+        fun  newInstance() = MovieFragment()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,9 +26,9 @@ class MovieFragment : Fragment() {
         return binding.root
     }
 
-//    override fun onActivityCreated(savedInstanceState: Bundle?) {
-//        super.onActivityCreated(savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
-//    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
+    }
 
 }

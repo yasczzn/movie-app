@@ -5,20 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:padding="16dp"
         android:background="@color/white">
 
         <androidx.cardview.widget.CardView
             android:layout_width="70pt"
             android:layout_height="100pt"
-            android:layout_margin="5dp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginHorizontal="10dp"
             android:background="#f5f5f5"
             android:clipToPadding="false"
             app:cardElevation="5dp"
             app:cardCornerRadius="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
