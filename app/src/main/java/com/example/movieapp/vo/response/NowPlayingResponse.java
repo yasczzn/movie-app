@@ -1,9 +1,12 @@
-package com.example.movieapp.response;
+package com.example.movieapp.vo.response;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
-public class PopularMovieResponse{
+public class NowPlayingResponse{
+
+	@SerializedName("dates")
+	private Dates dates;
 
 	@SerializedName("page")
 	private int page;
@@ -16,6 +19,10 @@ public class PopularMovieResponse{
 
 	@SerializedName("total_results")
 	private int totalResults;
+
+	public Dates getDates(){
+		return dates;
+	}
 
 	public int getPage(){
 		return page;

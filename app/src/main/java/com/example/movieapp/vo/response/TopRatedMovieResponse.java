@@ -1,4 +1,4 @@
-package com.example.movieapp.response;
+package com.example.movieapp.vo.response;
 
 import java.util.List;
 import com.google.gson.annotations.SerializedName;

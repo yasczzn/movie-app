@@ -1,4 +1,4 @@
-package com.example.movieapp
+package com.example.movieapp.di
 
 import android.app.Application
 import android.content.res.Resources

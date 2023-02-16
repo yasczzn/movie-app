@@ -5,7 +5,7 @@
     <data class="MovieDetailsFragmentBinding">
         <variable
             name="MovieDetailsResponse"
-            type="com.example.movieapp.response.MovieDetailsResponse"/>
+            type="com.example.movieapp.vo.response.MovieDetailsResponse"/>
     </data>
 
     <LinearLayout

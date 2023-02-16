@@ -1,15 +1,16 @@
-package com.example.movieapp.response;
+package com.example.movieapp.vo.response;
 
 import java.util.List;
+
 import com.google.gson.annotations.SerializedName;
 
-public class MovieDetailsResponse{
+public class MovieResponse{
 
 	@SerializedName("original_language")
 	private String originalLanguage;
 
 	@SerializedName("imdb_id")
-	private String imdbId;
+	private Object imdbId;
 
 	@SerializedName("video")
 	private boolean video;
@@ -18,7 +19,7 @@ public class MovieDetailsResponse{
 	private String title;
 
 	@SerializedName("backdrop_path")
-	private String backdropPath;
+	private Object backdropPath;
 
 	@SerializedName("revenue")
 	private int revenue;
@@ -30,7 +31,7 @@ public class MovieDetailsResponse{
 	private Object popularity;
 
 	@SerializedName("production_countries")
-	private List<ProductionCountriesItem> productionCountries;
+	private List<Object> productionCountries;
 
 	@SerializedName("id")
 	private int id;
@@ -51,13 +52,13 @@ public class MovieDetailsResponse{
 	private int runtime;
 
 	@SerializedName("poster_path")
-	private String posterPath;
+	private Object posterPath;
 
 	@SerializedName("spoken_languages")
-	private List<SpokenLanguagesItem> spokenLanguages;
+	private List<Object> spokenLanguages;
 
 	@SerializedName("production_companies")
-	private List<ProductionCompaniesItem> productionCompanies;
+	private List<Object> productionCompanies;
 
 	@SerializedName("release_date")
 	private String releaseDate;
@@ -84,7 +85,7 @@ public class MovieDetailsResponse{
 		return originalLanguage;
 	}
 
-	public String getImdbId(){
+	public Object getImdbId(){
 		return imdbId;
 	}
 
@@ -96,7 +97,7 @@ public class MovieDetailsResponse{
 		return title;
 	}
 
-	public String getBackdropPath(){
+	public Object getBackdropPath(){
 		return backdropPath;
 	}
 
@@ -112,7 +113,7 @@ public class MovieDetailsResponse{
 		return popularity;
 	}
 
-	public List<ProductionCountriesItem> getProductionCountries(){
+	public List<Object> getProductionCountries(){
 		return productionCountries;
 	}
 
@@ -140,15 +141,15 @@ public class MovieDetailsResponse{
 		return runtime;
 	}
 
-	public String getPosterPath(){
+	public Object getPosterPath(){
 		return posterPath;
 	}
 
-	public List<SpokenLanguagesItem> getSpokenLanguages(){
+	public List<Object> getSpokenLanguages(){
 		return spokenLanguages;
 	}
 
-	public List<ProductionCompaniesItem> getProductionCompanies(){
+	public List<Object> getProductionCompanies(){
 		return productionCompanies;
 	}
 

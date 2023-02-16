@@ -1,16 +1,15 @@
-package com.example.movieapp.response;
+package com.example.movieapp.vo.response;
 
 import java.util.List;
-
 import com.google.gson.annotations.SerializedName;
 
-public class MovieResponse{
+public class MovieDetailsResponse{
 
 	@SerializedName("original_language")
 	private String originalLanguage;
 
 	@SerializedName("imdb_id")
-	private Object imdbId;
+	private String imdbId;
 
 	@SerializedName("video")
 	private boolean video;
@@ -19,7 +18,7 @@ public class MovieResponse{
 	private String title;
 
 	@SerializedName("backdrop_path")
-	private Object backdropPath;
+	private String backdropPath;
 
 	@SerializedName("revenue")
 	private int revenue;
@@ -31,7 +30,7 @@ public class MovieResponse{
 	private Object popularity;
 
 	@SerializedName("production_countries")
-	private List<Object> productionCountries;
+	private List<ProductionCountriesItem> productionCountries;
 
 	@SerializedName("id")
 	private int id;
@@ -52,13 +51,13 @@ public class MovieResponse{
 	private int runtime;
 
 	@SerializedName("poster_path")
-	private Object posterPath;
+	private String posterPath;
 
 	@SerializedName("spoken_languages")
-	private List<Object> spokenLanguages;
+	private List<SpokenLanguagesItem> spokenLanguages;
 
 	@SerializedName("production_companies")
-	private List<Object> productionCompanies;
+	private List<ProductionCompaniesItem> productionCompanies;
 
 	@SerializedName("release_date")
 	private String releaseDate;
@@ -85,7 +84,7 @@ public class MovieResponse{
 		return originalLanguage;
 	}
 
-	public Object getImdbId(){
+	public String getImdbId(){
 		return imdbId;
 	}
 
@@ -97,7 +96,7 @@ public class MovieResponse{
 		return title;
 	}
 
-	public Object getBackdropPath(){
+	public String getBackdropPath(){
 		return backdropPath;
 	}
 
@@ -113,7 +112,7 @@ public class MovieResponse{
 		return popularity;
 	}
 
-	public List<Object> getProductionCountries(){
+	public List<ProductionCountriesItem> getProductionCountries(){
 		return productionCountries;
 	}
 
@@ -141,15 +140,15 @@ public class MovieResponse{
 		return runtime;
 	}
 
-	public Object getPosterPath(){
+	public String getPosterPath(){
 		return posterPath;
 	}
 
-	public List<Object> getSpokenLanguages(){
+	public List<SpokenLanguagesItem> getSpokenLanguages(){
 		return spokenLanguages;
 	}
 
-	public List<Object> getProductionCompanies(){
+	public List<ProductionCompaniesItem> getProductionCompanies(){
 		return productionCompanies;
 	}
 
