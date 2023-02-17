@@ -6,7 +6,7 @@
     <data class="MovieFragmentBinding">
         <variable
             name="MovieResponse"
-            type="com.example.movieapp.vo.response.MovieResponse"/>
+            type="com.example.movieapp.model.response.MovieResponse"/>
     </data>
 
     <LinearLayout
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/item_movie"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 

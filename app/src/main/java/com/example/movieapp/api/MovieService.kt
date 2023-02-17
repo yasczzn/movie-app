@@ -1,9 +1,5 @@
 package com.example.movieapp.api
 
-import com.example.movieapp.vo.response.MovieResponse
-import com.example.movieapp.vo.response.NowPlayingResponse
-import com.example.movieapp.vo.response.PopularMovieResponse
-import com.example.movieapp.vo.response.TopRatedMovieResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -21,21 +17,21 @@ interface MovieService {
     suspend fun getNowPlaying(
         @Header("Authorization") token: String,
         @Path("language") language: String,
-        @Path("page") page: Int
+        @Path("page") page: Int? = null
     ): Call<List<NowPlayingResponse>>
 
     @GET("/movie/popular")
     suspend fun getPopularMovie(
         @Header("Authorization") token: String,
         @Path("language") language: String,
-        @Path("page") page: Int
+        @Path("page") page: Int? = null
     ): Call<List<PopularMovieResponse>>
 
     @GET("/movie/top_rated")
     suspend fun getTopRatedMovie(
         @Header("Authorization") token: String,
         @Path("language") language: String,
-        @Path("page") page: Int
+        @Path("page") page: Int? = null
     ): Call<List<TopRatedMovieResponse>>
 
 }
