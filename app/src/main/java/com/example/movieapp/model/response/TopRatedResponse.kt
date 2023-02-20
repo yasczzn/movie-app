@@ -2,7 +2,7 @@ package com.example.movieapp.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class MovieResponse(
+data class TopRatedResponse(
 
 	@field:SerializedName("overview")
 	val overview: String? = null,
@@ -46,7 +46,3 @@ data class MovieResponse(
 	@field:SerializedName("vote_count")
 	val voteCount: Int? = null
 )
-
-
-
-
