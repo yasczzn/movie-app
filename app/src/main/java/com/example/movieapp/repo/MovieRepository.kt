@@ -1,7 +1,7 @@
 package com.example.movieapp.repo
 
-class MovieRepository {
-
+interface MovieRepository {
+    suspend fun movies()
 
 
 }

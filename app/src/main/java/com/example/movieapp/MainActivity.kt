@@ -2,14 +2,21 @@ package com.example.movieapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ComponentActivity
 import com.example.movieapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding: ActivityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContent {
+            DaggerHiltCourseTheme {
+                val viewModel = hiltViewModel
+            }
+        }
     }
 
 }

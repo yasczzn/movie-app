@@ -6,10 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
-import com.example.movieapp.MovieFragment
-import com.example.movieapp.MovieViewModel
-import com.example.movieapp.R
 import com.example.movieapp.databinding.MovieDetailsFragmentBinding
 
 class MovieDetailsFragment : Fragment() {
