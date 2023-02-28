@@ -20,7 +20,7 @@ class MovieAdapter(private val movie: ApiResponse<MovieResponse>) : RecyclerView
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(movie.results)
     }
-    override fun getItemCount() = movie.totalResults
+    override fun getItemCount(): Int = movie.totalResults
     // Iterating ViewHolder and loading it's
     // content to our Image and Text ViewsT
     class ViewHolder(private val binding: ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {

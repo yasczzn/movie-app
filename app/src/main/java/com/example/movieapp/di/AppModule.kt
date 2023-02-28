@@ -17,12 +17,13 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+    private const val BASE_URL = "https://api.themoviedb.org/3"
 
     @Provides
     @Singleton
     fun provideMovieService(): MovieService {
         return Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3")
+            .baseUrl(BASE_URL)
             .build()
             .create(MovieService::class.java)
     }
