@@ -30,8 +30,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideRepository(api: MovieService, app: Application): MovieRepository {
-        return  MovieRepositoryImpl(api, app)
+    fun provideRepository(api: MovieService): MovieRepository {
+        return  MovieRepositoryImpl(api)
     }
 
 }
