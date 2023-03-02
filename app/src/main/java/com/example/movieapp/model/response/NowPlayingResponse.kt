@@ -4,66 +4,48 @@ import com.google.gson.annotations.SerializedName
 
 data class NowPlayingResponse(
 
-	@SerializedName("dates")
-	val dates: Dates? = null,
+	@SerializedName("overview")
+	val overview: String,
 
-	@SerializedName("results")
-	val results: List<ResultsItem>? = null
+	@SerializedName("original_language")
+	val originalLanguage: String,
 
-) {
-	data class ResultsItem(
+	@SerializedName("original_title")
+	val originalTitle: String,
 
-		@SerializedName("overview")
-		val overview: String? = null,
+	@SerializedName("video")
+	val video: Boolean,
 
-		@SerializedName("original_language")
-		val originalLanguage: String? = null,
+	@SerializedName("title")
+	val title: String,
 
-		@SerializedName("original_title")
-		val originalTitle: String? = null,
+	@SerializedName("genre_ids")
+	val genreIds: List<Int>,
 
-		@SerializedName("video")
-		val video: Boolean? = null,
+	@SerializedName("poster_path")
+	val posterPath: String,
 
-		@SerializedName("title")
-		val title: String? = null,
+	@SerializedName("backdrop_path")
+	val backdropPath: String,
 
-		@SerializedName("genre_ids")
-		val genreIds: List<Int?>? = null,
+	@SerializedName("release_date")
+	val releaseDate: String,
 
-		@SerializedName("poster_path")
-		val posterPath: String? = null,
+	@SerializedName("popularity")
+	val popularity: Any,
 
-		@SerializedName("backdrop_path")
-		val backdropPath: String? = null,
+	@SerializedName("vote_average")
+	val voteAverage: Any,
 
-		@SerializedName("release_date")
-		val releaseDate: String? = null,
+	@SerializedName("id")
+	val id: Int,
 
-		@SerializedName("popularity")
-		val popularity: Any? = null,
+	@SerializedName("adult")
+	val adult: Boolean,
 
-		@SerializedName("vote_average")
-		val voteAverage: Any? = null,
+	@SerializedName("vote_count")
+	val voteCount: Int
 
-		@SerializedName("id")
-		val id: Int? = null,
-
-		@SerializedName("adult")
-		val adult: Boolean? = null,
-
-		@SerializedName("vote_count")
-		val voteCount: Int? = null
-	)
-
-	data class Dates(
-
-		@SerializedName("maximum")
-		val maximum: String? = null,
-
-		@SerializedName("minimum")
-		val minimum: String? = null
-	)
-}
+)
 
 

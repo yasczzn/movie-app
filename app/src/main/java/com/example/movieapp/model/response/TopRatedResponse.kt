@@ -5,44 +5,44 @@ import com.google.gson.annotations.SerializedName
 data class TopRatedResponse(
 
 	@SerializedName("overview")
-	val overview: String? = null,
+	val overview: String,
 
 	@SerializedName("original_language")
-	val originalLanguage: String? = null,
+	val originalLanguage: String,
 
 	@SerializedName("original_title")
-	val originalTitle: String? = null,
+	val originalTitle: String,
 
 	@SerializedName("video")
-	val video: Boolean? = null,
+	val video: Boolean,
 
 	@SerializedName("title")
-	val title: String? = null,
+	val title: String,
 
 	@SerializedName("genre_ids")
-	val genreIds: List<Int>? = null,
+	val genreIds: List<Int>,
 
 	@SerializedName("poster_path")
-	val posterPath: String? = null,
+	val posterPath: String,
 
 	@SerializedName("backdrop_path")
-	val backdropPath: String? = null,
+	val backdropPath: String,
 
 	@SerializedName("release_date")
-	val releaseDate: String? = null,
+	val releaseDate: String,
 
 	@SerializedName("popularity")
-	val popularity: Any? = null,
+	val popularity: Any,
 
 	@SerializedName("vote_average")
-	val voteAverage: Any? = null,
+	val voteAverage: Any,
 
 	@SerializedName("id")
-	val id: Int? = null,
+	val id: Int,
 
 	@SerializedName("adult")
-	val adult: Boolean? = null,
+	val adult: Boolean,
 
 	@SerializedName("vote_count")
-	val voteCount: Int? = null
+	val voteCount: Int
 )

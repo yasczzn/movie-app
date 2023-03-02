@@ -2,7 +2,7 @@ package com.example.movieapp.repo
 
 import com.example.movieapp.api.MovieService
 import com.example.movieapp.model.response.ApiResponse
-import com.example.movieapp.model.response.MovieRequest
+import com.example.movieapp.model.request.MovieRequest
 import com.example.movieapp.model.response.MovieResponse
 import javax.inject.Inject
 

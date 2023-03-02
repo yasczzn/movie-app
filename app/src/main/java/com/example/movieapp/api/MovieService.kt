@@ -1,24 +1,24 @@
 package com.example.movieapp.api
 
+import com.example.movieapp.model.request.MoreMovieRequest
+import com.example.movieapp.model.request.MovieRequest
 import com.example.movieapp.model.response.*
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.Header
-import retrofit2.http.Path
 
 interface MovieService {
 
     @GET("/movie/latest")
-    suspend fun getLatestMovie(@Body movies: MovieRequest): ApiResponse<MovieResponse>
+    suspend fun getLatestMovie(@Body movie: MovieRequest): ApiResponse<MovieResponse>
 
     @GET("/movie/now_playing")
-    suspend fun getNowPlaying(@Body movies: MoreMovieRequest): Response<NowPlayingResponse>
+    suspend fun getNowPlaying(@Body nowPlaying: MoreMovieRequest): Response<NowPlayingResponse>
 
     @GET("/movie/popular")
-    suspend fun getPopularMovie(@Body movies: MoreMovieRequest): ApiResponse<PopularMovieResponse>
+    suspend fun getPopularMovie(@Body popular: MoreMovieRequest): ApiResponse<PopularMovieResponse>
 
     @GET("/movie/top_rated")
-    suspend fun getTopRatedMovie(@Body movies: MoreMovieRequest): ApiResponse<TopRatedResponse>
+    suspend fun getTopRatedMovie(@Body topRated: MoreMovieRequest): ApiResponse<TopRatedResponse>
 
 }

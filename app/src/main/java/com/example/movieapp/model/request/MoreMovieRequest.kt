@@ -1,4 +1,4 @@
-package com.example.movieapp.model.response
+package com.example.movieapp.model.request
 
 import retrofit2.http.Header
 

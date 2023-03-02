@@ -2,7 +2,7 @@ package com.example.movieapp.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class ApiResponse<T>(
+data class Api2response<T>(
     @SerializedName("page")
     val page: Int,
 
@@ -13,5 +13,8 @@ data class ApiResponse<T>(
     val totalResults: Int = 0,
 
     @SerializedName("results")
-    val results: List<T>
+    val results: List<T>,
+
+    @SerializedName("dates")
+    val dates: Dates
 )
