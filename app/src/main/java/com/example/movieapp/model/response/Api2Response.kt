@@ -2,7 +2,7 @@ package com.example.movieapp.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class Api2response<T>(
+data class Api2Response<T>(
     @SerializedName("page")
     val page: Int,
 

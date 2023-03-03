@@ -13,7 +13,7 @@ interface MovieService {
     suspend fun getLatestMovie(@Body movie: MovieRequest): ApiResponse<MovieResponse>
 
     @GET("/movie/now_playing")
-    suspend fun getNowPlaying(@Body nowPlaying: MoreMovieRequest): Response<NowPlayingResponse>
+    suspend fun getNowPlaying(@Body nowPlaying: MoreMovieRequest): Api2Response<NowPlayingResponse>
 
     @GET("/movie/popular")
     suspend fun getPopularMovie(@Body popular: MoreMovieRequest): ApiResponse<PopularMovieResponse>

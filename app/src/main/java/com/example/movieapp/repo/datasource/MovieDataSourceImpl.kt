@@ -9,7 +9,7 @@ import javax.inject.Inject
 class MovieDataSourceImpl @Inject constructor(
     private val movieService: MovieService) : MovieDataSource{
 
-    override suspend fun movies(movie: MovieRequest): ApiResponse<MovieResponse> {
+    override suspend fun getMovies(movie: MovieRequest): ApiResponse<MovieResponse> {
         return movieService.getLatestMovie(movie = movie)
     }
 

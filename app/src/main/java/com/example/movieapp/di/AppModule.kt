@@ -1,16 +1,12 @@
 package com.example.movieapp.di
 
-import android.app.Application
-import com.example.movieapp.ApiKey
 import com.example.movieapp.api.MovieService
-import com.example.movieapp.repo.MovieRepository
 import com.example.movieapp.repo.MovieRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory.create
 import javax.inject.Singleton
 
 
