@@ -2,15 +2,15 @@ package com.example.movieapp.repo.datasource
 
 import com.example.movieapp.api.MovieService
 import com.example.movieapp.model.request.MovieRequest
-import com.example.movieapp.model.response.ApiResponse
-import com.example.movieapp.model.response.MovieResponse
+import com.example.movieapp.model.response.NowPlayingResponse
+import retrofit2.Response
 import javax.inject.Inject
 
 class MovieDataSourceImpl @Inject constructor(
     private val movieService: MovieService) : MovieDataSource{
 
-    override suspend fun getMovies(movie: MovieRequest): ApiResponse<MovieResponse> {
-        return movieService.getLatestMovie(movie = movie)
+    override suspend fun getMovies(movie: MovieRequest): Response<NowPlayingResponse> {
+        return movieService.getNowPlaying(nowPlaying = movie)
     }
 
 }

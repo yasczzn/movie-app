@@ -6,8 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.databinding.ItemMovieBinding
-import com.example.movieapp.model.response.ApiResponse
-import com.example.movieapp.model.response.MovieResponse
 
 class MovieAdapter(private val movie: ApiResponse<MovieResponse>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

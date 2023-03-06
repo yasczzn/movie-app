@@ -4,48 +4,76 @@ import com.google.gson.annotations.SerializedName
 
 data class NowPlayingResponse(
 
-	@SerializedName("overview")
-	val overview: String,
+	@field:SerializedName("dates")
+	val dates: Dates? = null,
 
-	@SerializedName("original_language")
-	val originalLanguage: String,
+	@field:SerializedName("page")
+	val page: Int? = null,
 
-	@SerializedName("original_title")
-	val originalTitle: String,
+	@field:SerializedName("total_pages")
+	val totalPages: Int? = null,
 
-	@SerializedName("video")
-	val video: Boolean,
+	@field:SerializedName("results")
+	val results: List<ResultsItem?>? = null,
 
-	@SerializedName("title")
-	val title: String,
+	@field:SerializedName("total_results")
+	val totalResults: Int? = null
+) {
 
-	@SerializedName("genre_ids")
-	val genreIds: List<Int>,
+	data class ResultsItem(
 
-	@SerializedName("poster_path")
-	val posterPath: String,
+		@field:SerializedName("overview")
+		val overview: String? = null,
 
-	@SerializedName("backdrop_path")
-	val backdropPath: String,
+		@field:SerializedName("original_language")
+		val originalLanguage: String? = null,
 
-	@SerializedName("release_date")
-	val releaseDate: String,
+		@field:SerializedName("original_title")
+		val originalTitle: String? = null,
 
-	@SerializedName("popularity")
-	val popularity: Any,
+		@field:SerializedName("video")
+		val video: Boolean? = null,
 
-	@SerializedName("vote_average")
-	val voteAverage: Any,
+		@field:SerializedName("title")
+		val title: String? = null,
 
-	@SerializedName("id")
-	val id: Int,
+		@field:SerializedName("genre_ids")
+		val genreIds: List<Int?>? = null,
 
-	@SerializedName("adult")
-	val adult: Boolean,
+		@field:SerializedName("poster_path")
+		val posterPath: String? = null,
 
-	@SerializedName("vote_count")
-	val voteCount: Int
+		@field:SerializedName("backdrop_path")
+		val backdropPath: String? = null,
 
-)
+		@field:SerializedName("release_date")
+		val releaseDate: String? = null,
+
+		@field:SerializedName("popularity")
+		val popularity: Any? = null,
+
+		@field:SerializedName("vote_average")
+		val voteAverage: Any? = null,
+
+		@field:SerializedName("id")
+		val id: Int? = null,
+
+		@field:SerializedName("adult")
+		val adult: Boolean? = null,
+
+		@field:SerializedName("vote_count")
+		val voteCount: Int? = null
+	)
+
+	data class Dates(
+
+		@field:SerializedName("maximum")
+		val maximum: String? = null,
+
+		@field:SerializedName("minimum")
+		val minimum: String? = null
+	)
+
+}
 
 

@@ -10,46 +10,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/black"
+        tools:context=".MainActivity">
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"/>
 
-            <FrameLayout
-                android:id="@+id/container_frame"
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="androidx.navigation.fragment.NavHostFragment"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                tools:context="com.example.movieapp.MainActivity">
-
-                <TextView
-                    android:id="@+id/no_internet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="not connected to internet!"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_15sdp"
-                    android:textColor="@color/grey"
-                    android:layout_gravity="center"
-                    android:visibility="gone"/>
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_50sdp"
-                    android:src="@drawable/ic_baseline_wifi_off_24"
-                    android:textColor="@color/grey"
-                    android:visibility="gone"/>
-
-            </FrameLayout>
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/movie_nav"
+                tools:layout="@layout/activity_main" />
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottom_navigation"
@@ -61,8 +38,6 @@
                 app:menu="@menu/bottom_nav"/>
 
         </LinearLayout>
-
-    </LinearLayout>
 
 </layout>
 

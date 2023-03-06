@@ -6,7 +6,7 @@
     <data class="MovieFragmentBinding">
         <variable
             name="MovieResponse"
-            type="com.example.movieapp.model.response.MovieResponse"/>
+            type="com.example.movieapp.model.response.NowPlayingResponse"/>
     </data>
 
     <LinearLayout

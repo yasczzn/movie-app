@@ -4,45 +4,62 @@ import com.google.gson.annotations.SerializedName
 
 data class TopRatedResponse(
 
-	@SerializedName("overview")
-	val overview: String,
+	@field:SerializedName("page")
+	val page: Int? = null,
 
-	@SerializedName("original_language")
-	val originalLanguage: String,
+	@field:SerializedName("total_pages")
+	val totalPages: Int? = null,
 
-	@SerializedName("original_title")
-	val originalTitle: String,
+	@field:SerializedName("results")
+	val results: List<ResultsItem?>? = null,
 
-	@SerializedName("video")
-	val video: Boolean,
+	@field:SerializedName("total_results")
+	val totalResults: Int? = null
+) {
 
-	@SerializedName("title")
-	val title: String,
+	data class ResultsItem(
 
-	@SerializedName("genre_ids")
-	val genreIds: List<Int>,
+		@field:SerializedName("overview")
+		val overview: String? = null,
 
-	@SerializedName("poster_path")
-	val posterPath: String,
+		@field:SerializedName("original_language")
+		val originalLanguage: String? = null,
 
-	@SerializedName("backdrop_path")
-	val backdropPath: String,
+		@field:SerializedName("original_title")
+		val originalTitle: String? = null,
 
-	@SerializedName("release_date")
-	val releaseDate: String,
+		@field:SerializedName("video")
+		val video: Boolean? = null,
 
-	@SerializedName("popularity")
-	val popularity: Any,
+		@field:SerializedName("title")
+		val title: String? = null,
 
-	@SerializedName("vote_average")
-	val voteAverage: Any,
+		@field:SerializedName("genre_ids")
+		val genreIds: List<Int?>? = null,
 
-	@SerializedName("id")
-	val id: Int,
+		@field:SerializedName("poster_path")
+		val posterPath: String? = null,
 
-	@SerializedName("adult")
-	val adult: Boolean,
+		@field:SerializedName("backdrop_path")
+		val backdropPath: String? = null,
 
-	@SerializedName("vote_count")
-	val voteCount: Int
-)
+		@field:SerializedName("release_date")
+		val releaseDate: String? = null,
+
+		@field:SerializedName("popularity")
+		val popularity: Any? = null,
+
+		@field:SerializedName("vote_average")
+		val voteAverage: Any? = null,
+
+		@field:SerializedName("id")
+		val id: Int? = null,
+
+		@field:SerializedName("adult")
+		val adult: Boolean? = null,
+
+		@field:SerializedName("vote_count")
+		val voteCount: Int? = null
+	)
+
+}
