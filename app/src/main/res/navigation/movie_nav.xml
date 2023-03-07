@@ -7,13 +7,19 @@
     <fragment
         android:id="@+id/movieFragment"
         android:name="com.example.movieapp.ui.movie.MovieFragment"
-        android:label="MovieFragment" />
+        android:label="MovieFragment" >
+
+    </fragment>
     <fragment
         android:id="@+id/myMovieFragment"
         android:name="com.example.movieapp.ui.movie.mymovie.MyMovieFragment"
-        android:label="MyMovieFragment" />
+        android:label="MyMovieFragment" >
+
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.movieapp.ui.searchmovie.SearchFragment"
-        android:label="SearchFragment" />
+        android:label="SearchFragment" >
+
+    </fragment>
 </navigation>
