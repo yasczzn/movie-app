@@ -7,8 +7,7 @@ import retrofit2.http.Query
 
 @Dao
 interface MovieDAO {
-
-    @Query("select * from movie")
+    
     fun movieListItem(): List<NowPlayingResponse>
 
 }

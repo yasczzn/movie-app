@@ -8,8 +8,7 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class MovieDataSourceImpl @Inject constructor(
-    private val movieService: MovieService,
-    private val movieDAO: MovieDAO) : MovieDataSource{
+    private val movieService: MovieService) : MovieDataSource{
 
     override suspend fun getMovies(movie: MovieRequest): Response<NowPlayingResponse> {
         return movieService.getNowPlaying(nowPlaying = movie)

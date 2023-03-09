@@ -1,7 +1,6 @@
-package com.example.movieapp.repo
+package com.example.movieapp.repo.repository
 
 
-import com.example.movieapp.api.MovieService
 import com.example.movieapp.model.request.MovieRequest
 import com.example.movieapp.model.response.NowPlayingResponse
 import com.example.movieapp.util.Resource
@@ -10,8 +9,8 @@ import retrofit2.Response
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(
-    private val movieDataSource: MovieService
-): MovieRepository{
+    private val movieDataSource: MovieDataSource
+): MovieRepository {
 
         private fun responseMovieResult(response: Response<NowPlayingResponse>) : Resource<NowPlayingResponse> {
             if(response.isSuccessful){
@@ -22,8 +21,7 @@ class MovieRepositoryImpl @Inject constructor(
             return Resource.Error(message = "${response.errorBody()?.string()}")
         }
 
-    suspend fun getMovies(movie: MovieRequest): Resource<NowPlayingResponse> {
-        return responseMovieResult(movieDataSource.getNowPlaying(nowPlaying = movie))
+    override suspend fun getMovies(movie: MovieRequest): Resource<NowPlayingResponse> {
+        return responseMovieResult(movieDataSource.getMovies(movie = movie))
     }
-
 }

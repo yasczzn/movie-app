@@ -14,11 +14,11 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class DataSourceModule {
 
-    @Provides
-    @Singleton
-    fun providesMovieDataSource(movieDAO: MovieDAO) : MovieDataSource {
-        return MovieDataSourceImpl(movieDAO = movieDAO)
-    }
+//    @Provides
+//    @Singleton
+//    fun providesMovieDataSource(movieDAO: MovieDAO) : MovieDataSource {
+//        return MovieDataSourceImpl(movieDAO = movieDAO)
+//    }
 
     @Provides
     @Singleton

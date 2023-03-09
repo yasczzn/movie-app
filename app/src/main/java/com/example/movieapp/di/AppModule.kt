@@ -2,15 +2,11 @@ package com.example.movieapp.di
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.movieapp.api.MovieService
-import com.example.movieapp.repo.MovieRepository
-import com.example.movieapp.repo.MovieRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import retrofit2.Retrofit
 import javax.inject.Singleton
 
 

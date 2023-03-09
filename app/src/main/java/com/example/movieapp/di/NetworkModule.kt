@@ -1,8 +1,6 @@
 package com.example.movieapp.di
 
 import com.example.movieapp.api.MovieService
-import com.example.movieapp.repo.MovieRepository
-import com.example.movieapp.repo.MovieRepositoryImpl
 import com.example.movieapp.util.Constants
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -14,7 +12,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
