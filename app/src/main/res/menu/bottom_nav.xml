@@ -6,7 +6,7 @@
         android:title="Movie"
         android:icon="@drawable/ic_baseline_movie_24"/>
     <item
-        android:id="@+id/save_page"
+        android:id="@+id/my_movie_page"
         android:title="My Movie"
         android:icon="@drawable/ic_baseline_bookmarks_24"/>
     <item

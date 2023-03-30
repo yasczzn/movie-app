@@ -6,8 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.movieapp.R
 import com.example.movieapp.databinding.ItemMovieBinding
+import com.example.movieapp.model.response.NowPlayingResponse
+import retrofit2.Response
 
-class MovieAdapter(private val movie: ApiResponse<MovieResponse>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+private val Any.results: List<NowPlayingResponse>?
+    get() {}
+
+class MovieAdapter(private val movie: Response<NowPlayingResponse>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         // Inflating list data from list_item to view
@@ -22,7 +27,7 @@ class MovieAdapter(private val movie: ApiResponse<MovieResponse>) : RecyclerView
     // Iterating ViewHolder and loading it's
     // content to our Image and Text ViewsT
     class ViewHolder(private val binding: ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(index: List<MovieResponse>?) {
+        fun bind(index: List<NowPlayingResponse>?) {
 
             binding.btnLike.setOnClickListener(View.OnClickListener { view ->
                 view.isSelected = !view.isSelected

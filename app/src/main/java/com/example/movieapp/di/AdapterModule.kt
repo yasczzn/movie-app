@@ -14,6 +14,6 @@ class AdapterModule {
     @Provides
     @Singleton
     fun providesMovieAdapter(): MovieAdapter {
-        return MovieAdapter()
+        return MovieAdapter(providesMovieAdapter())
     }
 }
