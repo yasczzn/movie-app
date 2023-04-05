@@ -9,9 +9,6 @@ import com.example.movieapp.databinding.ItemMovieBinding
 import com.example.movieapp.model.response.NowPlayingResponse
 import retrofit2.Response
 
-private val Any.results: List<NowPlayingResponse>?
-    get() {}
-
 class MovieAdapter(private val movie: Response<NowPlayingResponse>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -21,23 +18,14 @@ class MovieAdapter(private val movie: Response<NowPlayingResponse>) : RecyclerVi
     }
     // Binding cryptocurrency list to ViewHolder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(movie.results)
+
     }
-    override fun getItemCount(): Int = movie.totalResults
-    // Iterating ViewHolder and loading it's
-    // content to our Image and Text ViewsT
+
     class ViewHolder(private val binding: ItemMovieBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(index: List<NowPlayingResponse>?) {
-
-            binding.btnLike.setOnClickListener(View.OnClickListener { view ->
-                view.isSelected = !view.isSelected
-
-                if (view.isSelected) {
-                    binding.btnLike.setImageResource(R.drawable.ic_baseline_favorite_24)
-                } else {
-                    binding.btnLike.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-                }
-            })
-        }
     }
+
+    override fun getItemCount(): Int {
+        TODO("Not yet implemented")
+    }
+
 }
