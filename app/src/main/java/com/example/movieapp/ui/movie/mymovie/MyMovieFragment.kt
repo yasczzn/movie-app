@@ -1,16 +1,12 @@
 package com.example.movieapp.ui.movie.mymovie
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
-import com.example.movieapp.R
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.movieapp.databinding.MyMovieFragmentBinding
-import com.example.movieapp.ui.moviedetails.MovieDetailsFragment
-import com.example.movieapp.ui.moviedetails.MovieDetailsViewModel
 
 class MyMovieFragment : Fragment() {
 
@@ -23,7 +19,7 @@ class MyMovieFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: MyMovieFragmentBinding = MyMovieFragmentBinding.inflate(layoutInflater)
 
         return binding.root
@@ -32,7 +28,7 @@ class MyMovieFragment : Fragment() {
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MyMovieViewModel::class.java)
+        viewModel = ViewModelProvider(this)[MyMovieViewModel::class.java]
     }
 
 }

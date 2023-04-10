@@ -1,7 +1,6 @@
 package com.example.movieapp.di
 
 import com.example.movieapp.api.MovieService
-import com.example.movieapp.db.MovieDAO
 import com.example.movieapp.repo.datasource.MovieDataSource
 import com.example.movieapp.repo.datasource.MovieDataSourceImpl
 import dagger.Module

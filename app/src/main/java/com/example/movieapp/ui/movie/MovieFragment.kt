@@ -1,14 +1,13 @@
 package com.example.movieapp.ui.movie
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.movieapp.MovieViewModel
 import com.example.movieapp.databinding.MovieFragmentBinding
-import dagger.hilt.android.AndroidEntryPoint
 
 class MovieFragment : Fragment() {
 
@@ -21,7 +20,7 @@ class MovieFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: MovieFragmentBinding = MovieFragmentBinding.inflate(layoutInflater)
 
         return binding.root

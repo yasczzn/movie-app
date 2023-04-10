@@ -1,16 +1,12 @@
 package com.example.movieapp.ui.searchmovie
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
-import com.example.movieapp.R
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.movieapp.databinding.SearchFragmentBinding
-import com.example.movieapp.ui.movie.mymovie.MyMovieFragment
-import com.example.movieapp.ui.movie.mymovie.MyMovieViewModel
 
 class SearchFragment : Fragment() {
 
@@ -23,7 +19,7 @@ class SearchFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: SearchFragmentBinding = SearchFragmentBinding.inflate(layoutInflater)
 
         return binding.root
@@ -32,7 +28,7 @@ class SearchFragment : Fragment() {
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+        viewModel = ViewModelProvider(this)[SearchViewModel::class.java]
     }
 
 }

@@ -19,7 +19,7 @@ class MovieDetailsFragment : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: MovieDetailsFragmentBinding = MovieDetailsFragmentBinding.inflate(layoutInflater)
 
         return binding.root
@@ -28,7 +28,7 @@ class MovieDetailsFragment : Fragment() {
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MovieDetailsViewModel::class.java)
+        viewModel = ViewModelProvider(this)[MovieDetailsViewModel::class.java]
     }
 
 }
