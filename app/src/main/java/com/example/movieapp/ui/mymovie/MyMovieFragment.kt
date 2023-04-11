@@ -1,4 +1,4 @@
-package com.example.movieapp.ui.movie.mymovie
+package com.example.movieapp.ui.mymovie
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,7 +25,6 @@ class MyMovieFragment : Fragment() {
         return binding.root
     }
 
-    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[MyMovieViewModel::class.java]

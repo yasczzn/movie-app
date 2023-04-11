@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.movieapp.MovieViewModel
+import com.example.movieapp.databinding.MainActivityClass
 import com.example.movieapp.databinding.MovieFragmentBinding
 
 class MovieFragment : Fragment() {
@@ -26,7 +27,6 @@ class MovieFragment : Fragment() {
         return binding.root
     }
 
-    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this)[MovieViewModel::class.java]
