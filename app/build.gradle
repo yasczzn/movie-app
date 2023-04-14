@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace 'com.example.movieapp'
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.example.movieapp"
         minSdk 26
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -43,8 +43,8 @@ dependencies {
 
     //UI Dependency
     implementation 'androidx.core:core-ktx:1.10.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
